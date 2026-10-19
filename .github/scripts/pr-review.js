@@ -85,9 +85,9 @@ function buildFailureBody(results, runUrl) {
         .join('\n\n');
     return [
         MARKER,
-        '## 🤖 PR 自动初审：未通过',
+        '## 自动化审查：**未通过**',
         '',
-        '这个 PR 没有通过自动检查，已退回修改。请根据下面的提示修正后**推送新的提交**，推送后会自动重新初审。',
+        '此 PR 未通过自动化审查，原因如下：',
         '',
         '| 检查项 | 结果 |',
         '| --- | --- |',
@@ -95,21 +95,21 @@ function buildFailureBody(results, runUrl) {
         '',
         details,
         '',
+        '请在修改后重新提交',
+        '',
         `[查看完整日志](${runUrl})`,
     ].join('\n');
 }
 
-function buildPassBody(results, owner, runUrl) {
+function buildPassBody(results, runUrl) {
     const rows = results.map((r) => `| ${r.title} | ✅ 通过 |`).join('\n');
     return [
         MARKER,
-        '## 🤖 PR 自动初审：通过',
+        '## 自动化审查：**通过**',
         '',
         '| 检查项 | 结果 |',
         '| --- | --- |',
         rows,
-        '',
-        `自动检查只覆盖格式和语法，内容是否正确还需要 @${owner} 人工审核。审核通过后由 owner 合并。`,
         '',
         `[查看完整日志](${runUrl})`,
     ].join('\n');
@@ -134,7 +134,7 @@ async function dismissOldRejections(github, core, repo, number) {
                 ...repo,
                 pull_number: number,
                 review_id: review.id,
-                message: '新的提交已通过自动初审。',
+                message: '新的提交已通过自动化审查。',
             });
         } catch (e) {
             core.warning(`Could not dismiss review ${review.id}: ${e.message}`);
@@ -192,7 +192,7 @@ module.exports = async ({ github, context, core, artifactDir = 'pr-review' }) =>
         pull_number: number,
         commit_id: run.head_sha,
         event: 'COMMENT',
-        body: buildPassBody(results, repo.owner, runUrl),
+        body: buildPassBody(results, runUrl),
     });
     await setLabels(github, repo, number, LABEL_PASS, LABEL_FAIL);
 
