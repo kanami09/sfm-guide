@@ -46,6 +46,14 @@ public class Check {
         return e1;
     }
 
+    /** Path relative to the working directory, with '/' separators, so reports read "src/x.md:7". */
+    static String display(Path p) {
+        Path cwd = Paths.get("").toAbsolutePath();
+        Path abs = p.toAbsolutePath().normalize();
+        Path shown = abs.startsWith(cwd) ? cwd.relativize(abs) : abs;
+        return shown.toString().replace('\\', '/');
+    }
+
     public static void main(String[] args) throws Exception {
         if (args.length == 2 && args[0].equals("--tree")) {
             SFMLLexer lexer = new SFMLLexer(CharStreams.fromString(args[1]));
@@ -72,7 +80,7 @@ public class Check {
             if (f.toString().endsWith(".sfml")) {
                 total++;
                 List<String> e = tryAll(text);
-                if (!e.isEmpty()) { bad++; System.out.println("FAIL " + f + " " + e); }
+                if (!e.isEmpty()) { bad++; System.out.println("FAIL " + display(f) + " " + e); }
                 continue;
             }
             Matcher m = fence.matcher(text);
@@ -84,10 +92,10 @@ public class Check {
                 total++;
                 List<String> e = info.contains("error") ? errors(body) : tryAll(body);
                 if (info.contains("error")) {
-                    if (e.isEmpty()) { bad++; System.out.println("EXPECTED-ERROR-BUT-PARSED " + f + ":" + line); }
+                    if (e.isEmpty()) { bad++; System.out.println("EXPECTED-ERROR-BUT-PARSED " + display(f) + ":" + line); }
                 } else if (!e.isEmpty()) {
                     bad++;
-                    System.out.println("FAIL " + f + ":" + line + " " + e);
+                    System.out.println("FAIL " + display(f) + ":" + line + " " + e);
                 }
             }
         }
