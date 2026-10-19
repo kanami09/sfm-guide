@@ -29,7 +29,7 @@
 | 4.12.0 | 数量/保留量后的 `EACH`；`EXCEPT` 资源排除 |
 | 4.14.0 | `FORGET`；`ROUND ROBIN BY BLOCK/LABEL`；`redstone` 可以不加引号用作资源名 |
 | 4.15.0 | 集合运算符中 `EACH` 作为 `EVERY` 的别名；`EACH SIDE`；`fe`/`rf`/`energy`/`power` 作为 `forge_energy` 的别名；只搬能量的触发器可以更快执行；最小间隔可配置 |
-| 4.16.0 | `mekanism_energy` 资源类型；`EVERY TICK DO` 写法；`IF chest HAS EQ 0 THEN`（不写资源）；`redstone` 可以用作标签；修复输入限额在多个输出间不生效的问题 |
+| 4.16.0 | `mekanism_energy` 资源类型；`EVERY TICK DO` 写法；`IF chest HAS EQ 0 THEN`（不写资源）；`redstone` 可以用作标签；修复输入端数量限制在多个输出间不生效的问题 |
 | 4.17.0 | 修复部分 `FORGET` 重置计数器的问题；加入资源类型不匹配的警告 |
 | 4.18.0 | 改进 `EXCEPT` 的性能 |
 | 4.19.0 | `WITH TAG` 物品标签（tag）匹配；资源标识符自动转小写；1.21.1 上 `gas::` 等成为 `chemical::` 的别名 |

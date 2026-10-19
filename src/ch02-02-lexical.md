@@ -66,7 +66,7 @@ END
 | 程序与触发器 | `NAME` `EVERY` `DO` `END` `REDSTONE` `PULSE` |
 | 时间 | `TICK` `TICKS` `SECOND` `SECONDS` `GLOBAL`（及其简写 `G`） `PLUS` |
 | 输入输出 | `INPUT` `OUTPUT` `FROM` `TO` `FORGET` |
-| 限额 | `RETAIN` `EACH` `EXCEPT` |
+| 数量与排除 | `RETAIN` `EACH` `EXCEPT` |
 | 物品标签（tag） | `WITH` `WITHOUT` `TAG` |
 | 方向 | `TOP` `BOTTOM` `NORTH` `EAST` `SOUTH` `WEST` `LEFT` `RIGHT` `FRONT` `BACK` `NULL` `SIDE` |
 | 槽位 | `SLOT` `SLOTS` `EMPTY` `IN` |

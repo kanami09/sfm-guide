@@ -140,9 +140,9 @@ EVERY 20 TICKS DO
 END
 ```
 
-## WITH 属于单个限额
+## WITH 属于单个资源条目
 
-`WITH` / `WITHOUT` 是**限额级**的，只作用于它所在的那个资源限额，可以和数量、`RETAIN`、其他限额自由组合：
+`WITH` / `WITHOUT` 是**资源条目级**的，只作用于它所在的那个资源条目，可以和数量、`RETAIN`、其他资源条目自由组合：
 
 ```sfml
 EVERY 20 TICKS DO

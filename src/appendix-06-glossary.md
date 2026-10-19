@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | 工厂管理器 | Factory Manager / `ManagerBlock` | 运行程序的方块 |
 | 程序磁盘 | Disk | 保存程序源码和标签数据的物品 |
-| 标签 | Label | 用标签枪贴在方块上的名字，程序通过它找到方块。**区分大小写** |
+| 标签 | Label | 用标签枪标记在方块上的名字，程序通过它找到方块。**区分大小写** |
 | 物品标签（tag） | Tag / `TagKey` | 数据包定义的分类，如 `#c:ingots`。在 `WITH` 中使用 |
 | 推送 / 拉取 | Push / Pull | 标签枪与磁盘之间同步标签：右键管理器为推送，Shift + 右键为拉取 |
 | 线缆网络 | Cable Network | 由线缆和管理器连成的网络，只有其中的方块能被访问 |
@@ -24,10 +24,11 @@
 | 资源 | Resource | 能被搬运的东西：物品、流体、能量…… |
 | 资源类型 | Resource Type / `ResourceType` | `sfm:item`、`sfm:fluid`、`sfm:forge_energy` 等 |
 | 资源标识符 | Resource Identifier / `ResourceIdentifier` | 四段式 `类型命名空间:类型:命名空间:名字`，支持简写和通配符 |
-| 资源限额 | Resource Limit / `ResourceLimit` | 数量 + 保留量 + 资源 + `WITH` 条件 |
+| 资源条目 | Resource Limit / `ResourceLimit` | `INPUT`/`OUTPUT` 与 `FROM`/`TO` 之间逗号分隔的每一项：资源 + 数量 + 保留量 + `WITH` 条件，各自独立计数 |
+| 数量限制 | Limit / `Limit` | 资源条目中的数量与保留量部分 |
 | 数量 | Quantity | 最多搬多少 |
 | 保留量 | Retention / `RETAIN` | 输入端：至少留多少；输出端：最多补到多少 |
-| 资源析取 | Resource disjunction | 用 `OR` 连接、共享一个限额的多个资源 |
+| 资源析取 | Resource disjunction | 用 `OR` 连接、同属一个资源条目并共用计数的多个资源 |
 | 排除 | Exclusion / `EXCEPT` | 语句级的资源排除列表 |
 | 计数器 | Tracker | 记录已搬数量和保留义务的对象。`EACH` 决定计数器的粒度 |
 | 集合运算符 | Set Operator | `OVERALL`、`EVERY`、`SOME`、`ONE`、`LONE` |

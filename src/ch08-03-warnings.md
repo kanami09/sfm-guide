@@ -66,7 +66,7 @@ line 1:4 token recognition error at: '原'
 
 | 警告 | 含义与处理 |
 | --- | --- |
-| *EACH used without a pattern* | 数量后的 `EACH` 用在只可能匹配一种资源的限额上，没有意义（见 [5.4](ch05-04-each-quantity.md)） |
+| *EACH used without a pattern* | 数量后的 `EACH` 用在只可能匹配一种资源的资源条目上，没有意义（见 [5.4](ch05-04-each-quantity.md)） |
 | *Round robin by block shouldn't be used with EACH* | `ROUND ROBIN BY BLOCK` 与 `FROM EACH`/`TO EACH` 同时使用 |
 | *Round robin by label should be used with more than one label* | `ROUND ROBIN BY LABEL` 只列了一个标签 |
 

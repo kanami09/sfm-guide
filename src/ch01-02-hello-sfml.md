@@ -120,7 +120,7 @@ EVERY 5 SECONDS DO
 END
 ```
 
-这几个写法分别会在[资源匹配与限额](ch05-00-resources.md)和[触发器](ch03-00-triggers.md)两章中详细讲解。
+这几个写法分别会在[资源匹配与数量](ch05-00-resources.md)和[触发器](ch03-00-triggers.md)两章中详细讲解。
 
 ## 如果程序不工作
 

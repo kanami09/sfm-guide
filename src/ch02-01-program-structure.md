@@ -138,7 +138,7 @@ SFML **没有块注释**。要注释掉多行，在编辑器里选中这些行�
 
 | 列表 | 是否允许尾随逗号 |
 | --- | --- |
-| 资源限额列表（`INPUT 5 stone, 3 dirt, FROM a`） | ✅ |
+| 资源条目列表（`INPUT 5 stone, 3 dirt, FROM a`） | ✅ |
 | `EXCEPT` 后的资源列表 | ✅ |
 | `FORGET` 后的标签列表 | ✅ |
 | `OR` 连接的资源（`stone OR dirt OR`） | ✅（尾随的是 `OR`） |

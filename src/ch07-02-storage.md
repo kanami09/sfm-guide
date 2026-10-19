@@ -10,7 +10,7 @@
 
 ## 布局与标签
 
-| 标签 | 贴在 |
+| 标签 | 标记的方块 |
 | --- | --- |
 | `inbox` | 收件箱（漏斗、刷怪塔都往这里倒） |
 | `ores` | 矿物仓库（可以是多个箱子） |
@@ -50,18 +50,18 @@ END
 
 ### 一个 INPUT，多个 OUTPUT
 
-`INPUT FROM inbox` 只写一次，后面的每个 `OUTPUT` 都会从收件箱取货（见[工作模型](ch04-01-io-model.md)）。每个 `OUTPUT` 只接收自己的限额所匹配的东西，其他东西留在收件箱里，等后面的 `OUTPUT` 处理。最后一条不带过滤的 `OUTPUT` 负责兜底。
+`INPUT FROM inbox` 只写一次，后面的每个 `OUTPUT` 都会从收件箱取货（见[工作模型](ch04-01-io-model.md)）。每个 `OUTPUT` 只接收自己的资源条目所匹配的东西，其他东西留在收件箱里，等后面的 `OUTPUT` 处理。最后一条不带过滤的 `OUTPUT` 负责兜底。
 
 **顺序很重要**：兜底的 `OUTPUT` 必须放在最后，否则所有东西都会被它抢先拿走。
 
 ### 逗号和 OR 的区别
 
 ```sfml,ignore
-OUTPUT *_log OR *_wood OR *_planks TO wood          -- 一个限额，用 OR 合并
-OUTPUT rotten_flesh, bone, string TO mobs           -- 三个限额，用逗号分隔
+OUTPUT *_log OR *_wood OR *_planks TO wood          -- 一个资源条目，用 OR 合并
+OUTPUT rotten_flesh, bone, string TO mobs           -- 三个资源条目，用逗号分隔
 ```
 
-没有数量限制的时候，两种写法的效果相同。差别只在需要限量时才会体现（见[多个限额与 OR](ch05-05-limit-list.md)）。
+没有数量限制的时候，两种写法的效果相同。差别只在需要限量时才会体现（见[多个资源条目与 OR](ch05-05-limit-list.md)）。
 
 ### EMPTY SLOTS IN 与定期整理
 
