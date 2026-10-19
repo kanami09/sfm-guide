@@ -1,0 +1,18 @@
+[book]
+title = "SFML 编程语言指南"
+description = "Super Factory Manager（超级工厂管理器）模组的 SFML 语言中文教程：语法、关键字、语义与实例。"
+authors = ["Pengtao Hu"]
+language = "zh-CN"
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+additional-css = ["theme/sfml.css"]
+additional-js = ["theme/sfml-highlight.js"]
+no-section-label = false
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true

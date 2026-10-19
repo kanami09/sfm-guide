@@ -1,0 +1,55 @@
+/* SFML token colors; light themes first, then dark themes (navy / coal / ayu). */
+:root {
+    --sfml-keyword: #a626a4;
+    --sfml-builtin: #0d6efd;
+    --sfml-type: #b45309;
+    --sfml-symbol: #0e7490;
+    --sfml-operator: #c2410c;
+    --sfml-literal: #b91c1c;
+    --sfml-string: #15803d;
+    --sfml-number: #9333ea;
+    --sfml-comment: #6b7280;
+    --sfml-meta: #be185d;
+}
+
+.navy, .coal, .ayu {
+    --sfml-keyword: #d19aff;
+    --sfml-builtin: #7cb7ff;
+    --sfml-type: #f2b36b;
+    --sfml-symbol: #5fd3e6;
+    --sfml-operator: #ff9e64;
+    --sfml-literal: #ff7b7b;
+    --sfml-string: #8ee08e;
+    --sfml-number: #d0a8ff;
+    --sfml-comment: #8b949e;
+    --sfml-meta: #ff8fc7;
+}
+
+code.language-sfml .hljs-keyword { color: var(--sfml-keyword); font-weight: 600; }
+code.language-sfml .hljs-built_in { color: var(--sfml-builtin); }
+code.language-sfml .hljs-type { color: var(--sfml-type); }
+code.language-sfml .hljs-symbol { color: var(--sfml-symbol); }
+code.language-sfml .hljs-operator { color: var(--sfml-operator); font-weight: 600; }
+code.language-sfml .hljs-literal { color: var(--sfml-literal); }
+code.language-sfml .hljs-string { color: var(--sfml-string); }
+code.language-sfml .hljs-number { color: var(--sfml-number); }
+code.language-sfml .hljs-comment { color: var(--sfml-comment); font-style: italic; }
+code.language-sfml .hljs-meta { color: var(--sfml-meta); }
+code.language-sfml .hljs-punctuation { color: var(--sfml-operator); }
+
+/* Callout boxes used throughout the book: <div class="note">, <div class="warning">, <div class="source"> */
+.note, .warning, .source, .version {
+    border-left: 4px solid;
+    border-radius: 4px;
+    padding: 0.6em 1em;
+    margin: 1.2em 0;
+}
+.note { border-color: #3b82f6; background: rgba(59, 130, 246, 0.08); }
+.warning { border-color: #f59e0b; background: rgba(245, 158, 11, 0.10); }
+.source { border-color: #10b981; background: rgba(16, 185, 129, 0.08); font-size: 0.92em; }
+.version { border-color: #8b5cf6; background: rgba(139, 92, 246, 0.08); font-size: 0.92em; }
+.note > p:first-child, .warning > p:first-child, .source > p:first-child, .version > p:first-child { margin-top: 0; }
+.note > p:last-child, .warning > p:last-child, .source > p:last-child, .version > p:last-child { margin-bottom: 0; }
+
+/* Keep wide tables scrollable on narrow screens */
+.content table { display: block; overflow-x: auto; }
