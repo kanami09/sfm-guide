@@ -51,3 +51,12 @@ bash tools/sfml-check/check.sh --tree "every 20 ticks do if not true and false t
 ```
 
 需要安装 Java 17 或更高版本（JDK）、curl 和 bash。
+
+## 许可证
+
+| 内容 | 许可证 |
+| --- | --- |
+| 正文 | [CC BY-SA 4.0](LICENSE) |
+| 工具代码 | [MIT](LICENSE-CODE) |
+| 书中原创的 SFML 示例程序 | [MIT](LICENSE-CODE) |
+| 引自 SFM 的内容：附录 C 中的 `SFML.g4`，以及引自 SFM 内置示例程序（`template_programs`）和仓库 `examples/` 的代码 | 版权归 TeamDman 及贡献者，按 [MPL-2.0](https://github.com/TeamDman/SuperFactoryManager/blob/e9755fa9be3b9ccb1adb0ada36fd9b13422e1f82/LICENSE.txt) 授权 |

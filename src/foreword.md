@@ -38,4 +38,13 @@ SFML 很小。在几分钟就能写出第一个能用的程序，但想用好它
 
 语法检查只能保证“写法合法”。至于“运行起来会怎样”，本书的说法都来自对执行代码的逐行阅读，相关段落会附上对应源码的链接。
 
+## 许可证
+
+- 本书正文以 [CC BY-SA 4.0][cc-by-sa] 授权；
+- 书中原创的 SFML 示例程序以 [MIT][mit] 授权；
+- 引自 SFM 的内容（[附录 C](appendix-03-grammar.md) 中的 `SFML.g4`，以及引自 SFM 内置示例程序和仓库 `examples/` 的代码）版权归 TeamDman 及贡献者，按 [MPL-2.0][mpl] 授权。
+
 [sfm]: https://github.com/TeamDman/SuperFactoryManager
+[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans
+[mit]: https://github.com/kanami09/sfm-guide/blob/main/LICENSE-CODE
+[mpl]: https://github.com/TeamDman/SuperFactoryManager/blob/e9755fa9be3b9ccb1adb0ada36fd9b13422e1f82/LICENSE.txt
