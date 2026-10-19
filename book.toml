@@ -1,7 +1,7 @@
 [book]
-title = "SFML 编程语言指南"
-description = "Super Factory Manager（超级工厂管理器）模组的 SFML 语言中文教程：语法、关键字、语义与实例。"
-authors = ["Pengtao Hu"]
+title = "SFML 编程指南"
+description = "Super Factory Manager（超级工厂管理器）模组的 SFML 语言教程书：语法结构、关键字与实例。"
+authors = ["kanami"]
 language = "zh-CN"
 src = "src"
 
@@ -11,6 +11,7 @@ preferred-dark-theme = "navy"
 additional-css = ["theme/sfml.css"]
 additional-js = ["theme/sfml-highlight.js"]
 no-section-label = false
+git-repository-url = "https://github.com/kanami09/sfm-guide"
 
 [output.html.search]
 enable = true
