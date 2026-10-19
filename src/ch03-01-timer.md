@@ -12,7 +12,7 @@ END
 `EVERY <数字> <单位> DO ... END`：每隔指定的时间执行一次语句块。
 
 | 单位 | 含义 |
-|---|---|
+| --- | --- |
 | `TICK` / `TICKS` | 游戏刻。单复数完全等价，`EVERY 5 TICK` 也合法 |
 | `SECOND` / `SECONDS` | 秒，编译时乘以 20 换算成刻 |
 
@@ -42,7 +42,7 @@ EVERY SECOND DO END   -- 1 秒 = 20 刻
 为了防止程序拖垮服务器，SFM 在编译时检查每个定时触发器的间隔：
 
 | 情况 | 默认最小间隔 | 服务器配置项 |
-|---|---|---|
+| --- | --- | --- |
 | 一般情况 | **20 刻** | `timerTriggerMinimumIntervalInTicks` |
 | 触发器内所有 `INPUT`/`OUTPUT` 只涉及 Forge 能量（`fe::` 等，在部分 MC 版本上也包括 `mekanism_energy`） | **1 刻** | `timerTriggerMinimumIntervalInTicksWhenOnlyForgeEnergyIOStatementsPresent` |
 
@@ -96,7 +96,7 @@ END
 其中“时钟”有两种：
 
 | 对齐方式 | 写法 | 时钟来源 |
-|---|---|---|
+| --- | --- | --- |
 | **本地**（默认） | `EVERY 20 TICKS` | 管理器自己的计数器：管理器每运行一刻加 1 |
 | **全局** | `EVERY 20 GLOBAL TICKS` | 世界的游戏时间（`level.getGameTime()`） |
 
@@ -175,7 +175,7 @@ PLUS     : '+' | P L U S ;
 ```
 
 | 写法 | 间隔（刻） | 时钟 | 偏移（刻） |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `EVERY TICK` | 1 | 本地 | 0 |
 | `EVERY 20 TICKS` | 20 | 本地 | 0 |
 | `EVERY SECOND` | 20 | 本地 | 0 |

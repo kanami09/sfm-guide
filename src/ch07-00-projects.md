@@ -8,7 +8,7 @@
 - **讲解**：为什么这样写，有哪些坑，可以怎样变化。
 
 | 项目 | 用到的主要特性 |
-|---|---|
+| --- | --- |
 | [熔炉阵列](ch07-01-furnaces.md) | `TO EACH`、`RETAIN`、方向、`FORGET`、`WITH` |
 | [仓库收纳与整理](ch07-02-storage.md) | 多个 `OUTPUT` 分流、通配符、`EMPTY SLOTS IN` |
 | [机器补料：维持库存](ch07-03-stocking.md) | `RETAIN EACH`、`IF HAS`、集合运算符 |

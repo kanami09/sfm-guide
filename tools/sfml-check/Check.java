@@ -54,7 +54,8 @@ public class Check {
             System.out.println(Trees.toStringTree(tree, parser));
             return;
         }
-        Pattern fence = Pattern.compile("(?m)^```(sfml[^\\n]*)\\n(.*?)^```", Pattern.DOTALL);
+        // Fences may be indented, e.g. when a code block belongs to a list item
+        Pattern fence = Pattern.compile("(?m)^[ \\t]*```(sfml[^\\n]*)\\n(.*?)^[ \\t]*```", Pattern.DOTALL);
         int total = 0, bad = 0;
         List<Path> files = new ArrayList<>();
         for (String a : args) {

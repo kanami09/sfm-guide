@@ -18,14 +18,14 @@
 2. 点击“**编辑**”（或按 `Ctrl + E`），打开文本编辑器；
 3. 输入下面的程序：
 
-```sfml
-NAME "Hello SFML"
+   ```sfml
+   NAME "Hello SFML"
 
-EVERY 20 TICKS DO
-    INPUT FROM a
-    OUTPUT TO b
-END
-```
+   EVERY 20 TICKS DO
+       INPUT FROM a
+       OUTPUT TO b
+   END
+   ```
 
 4. 按 `Shift + Enter`，或点击完成按钮，保存并关闭编辑器。
 

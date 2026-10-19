@@ -29,6 +29,9 @@ jobs:
           distribution: temurin
           java-version: '21'
 
+      - name: Lint Markdown
+        run: npx --yes markdownlint-cli2@0.23.3 "**/*.md" "#book" "#node_modules"
+
       - name: Check SFML code blocks
         run: bash tools/sfml-check/check.sh
 

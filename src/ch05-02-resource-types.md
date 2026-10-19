@@ -5,7 +5,7 @@
 资源标识符的前两段是**资源类型**。4.34.0 内置的资源类型如下：
 
 | 资源类型 | 常用写法 | 数量单位 | 说明 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `sfm:item` | `stone`、`*`（默认） | 个 | 物品 |
 | `sfm:fluid` | `fluid::` | mB（1000 mB = 1 桶） | 流体 |
 | `sfm:forge_energy` | `fe::`、`forge_energy::` | FE | Forge 能量（RF），别名 `fe`、`rf`、`energy`、`power` |
@@ -14,7 +14,7 @@
 安装了 **Mekanism** 时，还会注册以下资源类型，具体取决于 Minecraft 版本：
 
 | MC 版本 | 额外的资源类型 |
-|---|---|
+| --- | --- |
 | 1.19.2 ~ 1.20.3 | `gas`、`infusion`、`pigment`、`slurry`、`mekanism_energy` |
 | 1.20.4、1.21.0 | `gas`、`infusion`、`pigment`、`slurry` |
 | 1.21.1、26.1.2 | `chemical`，以及作为它的**别名**的 `gas`、`infusion`、`pigment`、`slurry` |

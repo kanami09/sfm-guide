@@ -1,0 +1,23 @@
+// markdownlint configuration for an mdBook project written in Chinese.
+// Read by the VS Code markdownlint extension and markdownlint-cli2.
+{
+    "default": true,
+
+    // Chinese paragraphs are not hard-wrapped, and tables are wide.
+    "MD013": false,
+
+    // Callout boxes (<div class="note|warning|source|version">) and line breaks inside table cells.
+    "MD033": { "allowed_elements": ["div", "br"] },
+
+    // src/SUMMARY.md nests chapters with 4 spaces, following the mdBook documentation.
+    "MD007": { "indent": 4 },
+
+    // Bold lines are used as titles inside callout boxes, not as document headings.
+    "MD036": false,
+
+    // Allow "!" so that headings such as "Hello, SFML!" pass; other punctuation is still reported.
+    "MD026": { "punctuation": ".,;:。，；：" },
+
+    // Tables use one space around every pipe: | a | b | and | --- | --- |.
+    "MD060": { "style": "compact" }
+}

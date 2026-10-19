@@ -99,7 +99,7 @@ END
 ## 没有配对的语句
 
 | 情况 | 结果 | 警告 |
-|---|---|---|
+| --- | --- | --- |
 | `INPUT` 之后没有任何 `OUTPUT` | 什么也不发生 | *...inputs ... but no future output statement consume ...* |
 | `OUTPUT` 之前没有 `INPUT` | 什么也不发生 | *...uses resource type ... which has no matching input statement.* |
 | `INPUT` 和 `OUTPUT` 的资源类型对不上 | 什么也不发生 | 同上 |

@@ -20,7 +20,7 @@ mdbook build
 ## 目录结构
 
 | 路径 | 内容 |
-|---|---|
+| --- | --- |
 | `src/SUMMARY.md` | 目录 |
 | `src/*.md` | 各章节 |
 | `theme/sfml-highlight.js` | highlight.js 的 SFML 语法高亮定义 |
@@ -34,6 +34,7 @@ mdbook build
 - 语法正确但会在编译期失败（比如间隔太短）或者只用于说明的片段，用 ` ```sfml,ignore `；
 - 提示框：`<div class="note">`、`<div class="warning">`、`<div class="source">`（源码依据）、`<div class="version">`（版本信息），div 内部前后要留空行；
 - 中文全角标点紧挨着 `**` 时，粗体不会生效。要把括号放到粗体外面，例如 `**标签**（label）`。
+- Markdown 风格检查按 [.markdownlint.jsonc](.markdownlint.jsonc) 进行，VS Code 的 markdownlint 扩展会自动读取。也可以在命令行运行：`npx markdownlint-cli2@0.23.3 "**/*.md" "#book"`。CI 使用同一个版本，推送时会自动检查。如果编辑器扩展内置的 markdownlint 版本更新、报出了 CI 没报的规则，就同时升级 CI 中的版本号。
 
 ## 校验代码块
 

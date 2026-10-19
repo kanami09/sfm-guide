@@ -77,7 +77,7 @@ END
 ## 标签相关的警告
 
 | 警告 | 含义 |
-|---|---|
+| --- | --- |
 | *Label "x" is used in code but not assigned in the world.* | 程序里用了 `x`，但世界中没有方块贴着它（或者忘了推送） |
 | *Label "x" is assigned in the world but not defined in code.* | 世界中有方块贴着 `x`，但程序里没用到 |
 | *Label "x" is assigned in the world at ... but not connected by cables.* | 贴了标签的方块没连进网络 |

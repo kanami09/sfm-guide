@@ -10,7 +10,7 @@ SFM 的服务器配置**对客户端可见**（配置文件注释原文：*This 
 ## 服务器配置项
 
 | 配置项 | 默认值 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `disableProgramExecution` | `false` | 设为 `true` 时，所有管理器停止编译和运行程序（紧急情况使用） |
 | `logResourceLossToConsole` | `true` | 发生“资源丢失”（目的地实际插入的数量少于模拟时声称的数量）时，是否在控制台输出详细报告 |
 | `timerTriggerMinimumIntervalInTicks` | `20` | 定时触发器的最小间隔（刻），范围 1 ~ 2³¹−1 |
@@ -29,7 +29,7 @@ SFM 的服务器配置**对客户端可见**（配置文件注释原文：*This 
 ## 客户端配置项
 
 | 配置项 | 默认值 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `showLabelGunReminderOverlay` | `true` | 手持标签枪时显示操作提示 |
 | `showNetworkToolReminderOverlay` | `true` | 手持网络工具时显示操作提示 |
 
@@ -38,7 +38,7 @@ SFM 的服务器配置**对客户端可见**（配置文件注释原文：*This 
 可以在编辑器左下角的按钮中修改：
 
 | 配置项 | 默认值 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `showLineNumbers` | `false` | 显示行号 |
 | `intellisenseLevel` | `OFF` | 智能提示：`OFF` / 基础 / 高级 |
 | `preferredEditor` | `sfm:v1` | 首选编辑器：V1 / V2 |

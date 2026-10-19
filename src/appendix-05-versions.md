@@ -13,7 +13,7 @@
 语法相同，但下面这些与游戏环境有关的部分会因 MC 版本而异：
 
 | 方面 | 差异 |
-|---|---|
+| --- | --- |
 | **Mekanism 资源类型** | 1.19.2 ~ 1.20.3：`gas`、`infusion`、`pigment`、`slurry`、`mekanism_energy`<br>1.20.4、1.21.0：`gas`、`infusion`、`pigment`、`slurry`<br>1.21.1、26.1.2：`chemical`，`gas` 等是它的别名 |
 | **通用物品标签（tag）的命名空间** | 较早的 Forge：`forge:`（如 `#forge:ingots`）<br>1.21 及以后的 NeoForge：`c:`（如 `#c:ingots`）<br>省略命名空间（`#ingots`）可以同时兼容 |
 | **能力（Capability）系统** | NeoForge 在 1.20.3 前后重写了能力系统，SFM 内部做了适配，SFML 写法不受影响 |
@@ -25,7 +25,7 @@
 下表整理自模组内置的 `changelog.sfml`，只列出与 SFML 语言及其语义相关的条目。如果你在用较旧的整合包，可以对照此表判断某个特性能不能用。
 
 | 版本 | 变化 |
-|---|---|
+| --- | --- |
 | 4.12.0 | 数量/保留量后的 `EACH`；`EXCEPT` 资源排除 |
 | 4.14.0 | `FORGET`；`ROUND ROBIN BY BLOCK/LABEL`；`redstone` 可以不加引号用作资源名 |
 | 4.15.0 | 集合运算符中 `EACH` 作为 `EVERY` 的别名；`EACH SIDE`；`fe`/`rf`/`energy`/`power` 作为 `forge_energy` 的别名；只搬能量的触发器可以更快执行；最小间隔可配置 |

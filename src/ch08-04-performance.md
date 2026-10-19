@@ -65,7 +65,7 @@ END
 ## 8. 服务器管理员的紧急手段
 
 | 手段 | 作用 |
-|---|---|
+| --- | --- |
 | 配置 `disableProgramExecution = true` | 所有管理器停止编译和运行程序（紧急情况使用）。SFM 引发崩溃时，崩溃信息中也会提示这个配置项 |
 | 调大 `timerTriggerMinimumIntervalInTicks` | 提高全服的最小间隔 |
 | `disallowedResourceTypesForTransfer` | 禁止搬运某些资源类型 |

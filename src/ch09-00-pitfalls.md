@@ -106,34 +106,34 @@ Mekanism 方块无方向访问时只读。必须写方向，并且要与面配�
 ### examples/01-moveitems.sfm
 
 | 原文（注释） | 实际情况 |
-|---|---|
+| --- | --- |
 | *"minecraft:" namespace is assumed*（`iron_ingot` 默认是 `minecraft:` 命名空间） | **过时**。一段式资源名匹配**任意**命名空间：`iron_ingot` → `sfm:item:.*:iron_ingot`。见 `ResourceIdentifier(String value)` 构造函数，以及内置示例 `resource_types.sfml` 的说明 |
 | *redstone is a keyword for future use, so must be surrounded in quotes* | **过时**。4.14.0 起 `redstone` 可以直接当资源名和标签名，语法中 `identifier` 规则包含 `REDSTONE` |
 
 ### examples/03-conditions.sfm
 
 | 原文（注释） | 实际情况 |
-|---|---|
+| --- | --- |
 | *"not", "and", and "or" operators all have same precidence* | **不符**。左递归规则中备选分支的顺序决定了优先级：`NOT` > `AND` > `OR`。已用 ANTLR 4.9.1 实测 |
 | *"minecraft:" namespace prefix is default and can be omitted* | **过时**，同上 |
 
 ### examples/04-smelting.sfm
 
 | 原文（注释） | 实际情况 |
-|---|---|
+| --- | --- |
 | *namespace defaults to "minecraft:"* | **过时**，同上 |
 
 ### examples/README.md
 
 | 原文 | 实际情况 |
-|---|---|
+| --- | --- |
 | *There are currently 3 statements: INPUT, OUTPUT, IF* | **不完整**。正式版共有 4 种语句，还有 `FORGET`（4.14.0 加入） |
 | 语法文件链接指向 `platform/minecraft/src/main/antlr/sfml/SFML.g4` | 这是**主分支开发版**的语法，其中包含 `LET`、`BROADCAST`、`RENDER IMAGE`、`EVERY FRAME` 等**未发布**的功能。正式版语法见 `projections/sfm-4.34.0/*/src/main/antlr/sfml/SFML.g4`（本书[附录 C](appendix-03-grammar.md)） |
 
 ### 网络教程与自动生成的文档
 
 | 常见说法 | 实际情况 |
-|---|---|
+| --- | --- |
 | “`INPUT` 会把物品取到管理器里，再由 `OUTPUT` 放出去” | **错误**。SFM 没有缓冲区，`INPUT` 只登记，物品直接从来源搬到目的地 |
 | “最短只能每 20 刻执行一次” | **不完全对**。20 刻是**默认值**，服务器可以修改；只搬能量的触发器默认可以每刻执行；红石脉冲触发器不受这个限制 |
 | “`ROUND ROBIN` 会在一刻内把东西均分给所有目标” | **不是原版行为**。原版每次执行只选一个目标（或一个标签），依次轮换。“一刻内均分”是第三方附属模组（如 SFM Optimizer）修改后的行为 |

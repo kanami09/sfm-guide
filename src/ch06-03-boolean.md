@@ -3,7 +3,7 @@
 ## 运算符
 
 | 写法 | 含义 |
-|---|---|
+| --- | --- |
 | `TRUE` / `FALSE` | 布尔常量 |
 | `NOT x` | 取反 |
 | `x AND y` | 与：两者都为真 |
@@ -38,7 +38,7 @@ END
 本书作者用 SFM 构建时所用的 ANTLR 4.9.1 生成解析器做了实测，结果如下：
 
 | 表达式 | 实际结合方式 |
-|---|---|
+| --- | --- |
 | `NOT TRUE AND FALSE` | `(NOT TRUE) AND FALSE` |
 | `A OR B AND C` | `A OR (B AND C)` |
 | `NOT A OR B` | `(NOT A) OR B` |

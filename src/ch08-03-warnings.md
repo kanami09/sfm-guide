@@ -21,7 +21,7 @@ line 1:4 token recognition error at: '原'
 常见原因：
 
 | 现象 | 原因 |
-|---|---|
+| --- | --- |
 | `token recognition error` | 使用了词法不认识的字符，比如未加引号的中文、`.`、`-` |
 | `mismatched input 'xxx'` | 关键字被当成了名字（加引号），或者各部分的顺序错了 |
 | `missing END` / `extraneous input` | `DO`/`THEN` 与 `END` 没有配对 |
@@ -29,7 +29,7 @@ line 1:4 token recognition error at: '原'
 ### 编译期错误
 
 | 错误信息 | 原因 |
-|---|---|
+| --- | --- |
 | *Minimum trigger interval is N ticks.* | 定时触发器的间隔小于最小值（见[定时触发器](ch03-01-timer.md#最小间隔)） |
 | *Label name cannot be longer than 256 characters.* | 标签太长 |
 | *Invalid resource identifier pattern "..."* | 带引号的正则表达式不合法 |
@@ -44,7 +44,7 @@ line 1:4 token recognition error at: '原'
 ### 标签
 
 | 警告 | 含义与处理 |
-|---|---|
+| --- | --- |
 | *Label "x" is used in code but not assigned in the world.* | 程序用到了标签 x，但没有方块贴着它。检查拼写和大小写，确认已经推送 |
 | *Label "x" is assigned in the world but not defined in code.* | 有方块贴着 x，但程序没用到。可能是旧标签，可以清掉 |
 | *Label "x" is assigned in the world at ... but not connected by cables.* | 方块不在线缆网络中 |
@@ -54,7 +54,7 @@ line 1:4 token recognition error at: '原'
 ### 输入输出
 
 | 警告 | 含义与处理 |
-|---|---|
+| --- | --- |
 | *Statement "..." inputs "..." from "..." but no future output statement consume "..."* | 这条 `INPUT` 登记的某种资源类型，后面没有任何 `OUTPUT` 会消费。常见原因：漏写了 `OUTPUT`；或者 `OUTPUT` 没写对应的资源类型（如 `fluid::`） |
 | *Statement "..." uses resource type "..." which has no matching input statement.* | `OUTPUT` 的资源类型在前面没有对应的 `INPUT` |
 | *Statement matches no slots* | 指定的槽位或方向上没有槽位 |
@@ -65,7 +65,7 @@ line 1:4 token recognition error at: '原'
 ### 写法
 
 | 警告 | 含义与处理 |
-|---|---|
+| --- | --- |
 | *EACH used without a pattern* | 数量后的 `EACH` 用在只可能匹配一种资源的限额上，没有意义（见 [5.4](ch05-04-each-quantity.md)） |
 | *Round robin by block shouldn't be used with EACH* | `ROUND ROBIN BY BLOCK` 与 `FROM EACH`/`TO EACH` 同时使用 |
 | *Round robin by label should be used with more than one label* | `ROUND ROBIN BY LABEL` 只列了一个标签 |
@@ -73,7 +73,7 @@ line 1:4 token recognition error at: '原'
 ### Mekanism
 
 | 警告 | 含义与处理 |
-|---|---|
+| --- | --- |
 | *Mekanism blocks are read-only from the null direction* | 在 Mekanism 方块上没写方向 |
 | *Mekanism block side config at ... doesn't agree with statement* | 程序中的方向与机器的面配置不一致 |
 

@@ -88,7 +88,7 @@ for 每个来源槽位:
 根据数量和保留量是否带 `EACH`，每个资源限额会使用以下四种计数器之一（输入端和输出端各有一套）：
 
 | 计数器 | 数量 | 保留量 |
-|---|---|---|
+| --- | --- | --- |
 | `SharedQuantitySharedRetention…` | 共享 | 共享 |
 | `ExpandedQuantitySharedRetention…` | 按资源分别计算 | 共享 |
 | `SharedQuantityExpandedRetention…` | 共享 | 按资源分别计算 |

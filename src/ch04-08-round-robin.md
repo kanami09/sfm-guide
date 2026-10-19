@@ -99,7 +99,7 @@ END
 ## 相关警告
 
 | 警告 | 含义 |
-|---|---|
+| --- | --- |
 | *Round robin by block shouldn't be used with EACH* | `BY BLOCK` 每次只选一个方块，再加 `EACH`（逐个方块计数）没有意义 |
 | *Round robin by label should be used with more than one label* | `BY LABEL` 只列了一个标签，轮询不起作用 |
 
