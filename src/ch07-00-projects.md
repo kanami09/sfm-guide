@@ -14,6 +14,7 @@
 | [机器补料：维持库存](ch07-03-stocking.md) | `RETAIN EACH`、`IF HAS`、集合运算符 |
 | [流体、能量与化学品](ch07-04-fluids-energy.md) | 资源类型、每刻触发、Mekanism 面配置 |
 | [AE2 压印器](ch07-05-ae2.md) | 槽位、`RETAIN`、多触发器协作、防死锁 |
+| [复制福鲁伊克斯水晶和恩特罗水晶](ch07-06-fluix-entro-crystal.md) | 多个 `INPUT` 共用一个 `OUTPUT`、`RETAIN EACH`、输入端保留量、红石脉冲触发器 |
 
 <div class="note">
 
