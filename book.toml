@@ -6,6 +6,7 @@ language = "zh-CN"
 src = "src"
 
 [output.html]
+site-url = "/sfm-guide/"
 default-theme = "light"
 preferred-dark-theme = "navy"
 additional-css = ["theme/sfml.css"]
