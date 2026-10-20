@@ -38,7 +38,28 @@ mdbook build
 
 ## 校验代码块
 
-`tools/sfml-check/check.sh` 会下载 ANTLR 4.9.1（与 SFM 构建时用的版本相同）和 4.34.0 正式版的 `SFML.g4`，生成解析器，然后解析 `src/` 中的所有 SFML 代码块：
+校验脚本会下载 ANTLR 4.9.1（与 SFM 构建时用的版本相同）和 4.34.0 正式版的 `SFML.g4`，生成解析器，然后解析 `src/` 中的所有 SFML 代码块。脚本有两个版本：
+
+| 系统 | 脚本 | 额外依赖 |
+| --- | --- | --- |
+| Windows | `check.ps1`（PowerShell 5.1 或 7） | — |
+| Linux / macOS / Git Bash | `check.sh` | bash、curl |
+
+两者都需要安装 Java 17 或更高版本（JDK）。
+
+Windows（PowerShell）：
+
+```powershell
+.\tools\sfml-check\check.ps1
+```
+
+如果提示“禁止运行脚本”，可以改用这条命令，它将对本次运行放宽执行策略：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\sfml-check\check.ps1
+```
+
+Linux / macOS / Git Bash：
 
 ```bash
 bash tools/sfml-check/check.sh
@@ -46,11 +67,13 @@ bash tools/sfml-check/check.sh
 
 查看某段代码的解析树（比如用来确认运算符优先级）：
 
+```powershell
+.\tools\sfml-check\check.ps1 -Tree "every 20 ticks do if not true and false then end end"
+```
+
 ```bash
 bash tools/sfml-check/check.sh --tree "every 20 ticks do if not true and false then end end"
 ```
-
-需要安装 Java 17 或更高版本（JDK）、curl 和 bash。
 
 ## 许可证
 
