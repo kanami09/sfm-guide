@@ -33,7 +33,7 @@ END
 
 <div class="version">
 
-**版本差异：通用标签的命名空间**
+**通用标签的命名空间**
 
 - MC 1.21 及以后（NeoForge）的通用标签使用 `c:` 命名空间，例如 `#c:ingots`、`#c:ores`、`#c:gems`；
 - 更早的 Forge 版本（如 1.19.2、1.20.1）使用 `forge:` 命名空间，例如 `#forge:ingots`；
@@ -99,7 +99,7 @@ END
 
 <div class="source">
 
-**源码依据**：`ItemResourceType.getTagsForStack()` 先取 `Block.byItem(item)` 的方块标签（tag），再合并物品标签（tag）；`TagMatcher.testPath()` 实现了上述段数规则和 `**` 的处理（[TagMatcher.java][tag]）。
+`ItemResourceType.getTagsForStack()` 先取 `Block.byItem(item)` 的方块标签（tag），再合并物品标签（tag）；`TagMatcher.testPath()` 实现了上述段数规则和 `**` 的处理（[TagMatcher.java][tag]）。
 
 </div>
 
@@ -173,7 +173,7 @@ END
 
 <div class="version">
 
-**版本**：`WITH TAG` 从 4.19.0 开始提供；`WITHOUT` 以及 `WITH` 中的 `OR` 在 4.20.0 修复了逻辑错误。
+`WITH TAG` 从 4.19.0 开始提供；`WITHOUT` 以及 `WITH` 中的 `OR` 在 4.20.0 修复了逻辑错误。
 
 </div>
 

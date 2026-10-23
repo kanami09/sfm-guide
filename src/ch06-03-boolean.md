@@ -96,7 +96,7 @@ END
 
 <div class="source">
 
-**源码依据**：上面两段代码的解析树都由本书的检查工具实际生成。第一段中，`stone OR redstone` 被解析为 `resourceIdDisjunction`；第二段中，`OR` 被解析为 `BooleanDisjunction`。
+上面两段代码的解析树都由本书的检查工具实际生成。第一段中，`stone OR redstone` 被解析为 `resourceIdDisjunction`；第二段中，`OR` 被解析为 `BooleanDisjunction`。
 
 </div>
 

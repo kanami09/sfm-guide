@@ -73,7 +73,7 @@ END
 
 <div class="source">
 
-**源码依据**：`OutputStatement.gatherSlots()` 中，`each` 为真时，在 `resourceType.forEachCapability(...)` 的回调**内部**调用 `resourceLimits.createOutputTrackers()`，即每遇到一个（标签，位置，方向）能力就新建一组计数器；`each` 为假时，计数器在循环外创建一次，所有能力共用。`InputStatement.gatherSlots()` 的结构相同。
+`OutputStatement.gatherSlots()` 中，`each` 为真时，在 `resourceType.forEachCapability(...)` 的回调**内部**调用 `resourceLimits.createOutputTrackers()`，即每遇到一个（标签，位置，方向）能力就新建一组计数器；`each` 为假时，计数器在循环外创建一次，所有能力共用。`InputStatement.gatherSlots()` 的结构相同。
 
 </div>
 

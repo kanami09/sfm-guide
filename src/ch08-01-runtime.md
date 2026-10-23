@@ -23,7 +23,7 @@
 
 <div class="source">
 
-**源码依据**：`ProgramBuilder` 中的 `private static final WeakHashMap<String, CachedProgramBuildResult> cache`，以及 `if (useCache && errors.isEmpty()) cache.put(programString, ...)`。
+`ProgramBuilder` 中的 `private static final WeakHashMap<String, CachedProgramBuildResult> cache`，以及 `if (useCache && errors.isEmpty()) cache.put(programString, ...)`。
 
 </div>
 
@@ -90,6 +90,6 @@ for 每个触发器（按书写顺序）:
 
 <div class="note">
 
-**提示**：管理器从存档加载时，本地时钟会被随机化。如果你的程序依赖精确的执行时刻，请使用 `GLOBAL` 时钟（见[定时触发器](ch03-01-timer.md#管理器时钟与全局时钟)）。
+管理器从存档加载时，本地时钟会被随机化。如果你的程序依赖精确的执行时刻，请使用 `GLOBAL` 时钟（见[定时触发器](ch03-01-timer.md#管理器时钟与全局时钟)）。
 
 </div>

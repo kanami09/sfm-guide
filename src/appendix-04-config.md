@@ -22,7 +22,7 @@ SFM 的服务器配置**对客户端可见**（配置文件注释原文：*This 
 
 <div class="source">
 
-**源码依据**：[SFMServerConfig.java](https://github.com/TeamDman/SuperFactoryManager/blob/e9755fa9be3b9ccb1adb0ada36fd9b13422e1f82/platform/minecraft/projections/sfm-4.34.0/mc-1.21.1/src/main/java/ca/teamdman/sfm/common/config/SFMServerConfig.java)
+[SFMServerConfig.java](https://github.com/TeamDman/SuperFactoryManager/blob/e9755fa9be3b9ccb1adb0ada36fd9b13422e1f82/platform/minecraft/projections/sfm-4.34.0/mc-1.21.1/src/main/java/ca/teamdman/sfm/common/config/SFMServerConfig.java)
 
 </div>
 

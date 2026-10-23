@@ -70,7 +70,7 @@ END
 
 <div class="version">
 
-**版本**：不写资源的 `IF chest HAS EQ 0 THEN` 写法从 4.16.0 开始支持，在此之前必须写成 `IF chest HAS EQ 0 item:: THEN`。
+不写资源的 `IF chest HAS EQ 0 THEN` 写法从 4.16.0 开始支持，在此之前必须写成 `IF chest HAS EQ 0 item:: THEN`。
 
 </div>
 
@@ -93,7 +93,7 @@ END
 
 <div class="warning">
 
-**注意**：不要对普通容器写 `EACH SIDE`。`HAS` 会把每个方向上看到的数量**累加**，同一个箱子会被数 7 次（见[方向](ch04-03-sides.md#each-side-的含义)）。
+不要对普通容器写 `EACH SIDE`。`HAS` 会把每个方向上看到的数量**累加**，同一个箱子会被数 7 次（见[方向](ch04-03-sides.md#each-side-的含义)）。
 
 </div>
 
@@ -134,7 +134,7 @@ END
 
 <div class="source">
 
-**源码依据**：`BoolHas.test()` 先对每个“标签-方块”分别计数，得到一组真假值，同时累计总数；然后由 `SetOperator` 汇总：`OVERALL` 只看总数的比较结果，`SOME` 是 `anyMatch`，`EVERY` 是 `allMatch`，`ONE` 是“真值个数 == 1”，`LONE` 是“真值个数 <= 1”（[BoolHas.java][has]、[SetOperator.java][setop]）。`SetOperator.from()` 会把 `EACH` 转换成 `EVERY`。
+`BoolHas.test()` 先对每个“标签-方块”分别计数，得到一组真假值，同时累计总数；然后由 `SetOperator` 汇总：`OVERALL` 只看总数的比较结果，`SOME` 是 `anyMatch`，`EVERY` 是 `allMatch`，`ONE` 是“真值个数 == 1”，`LONE` 是“真值个数 <= 1”（[BoolHas.java][has]、[SetOperator.java][setop]）。`SetOperator.from()` 会把 `EACH` 转换成 `EVERY`。
 
 </div>
 

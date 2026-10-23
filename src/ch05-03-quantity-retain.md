@@ -41,7 +41,7 @@ END
 
 <div class="source">
 
-**源码依据**：`ASTBuilder.visitInputResourceLimits()` 使用 `Limit.MAX_QUANTITY_NO_RETENTION`（数量为 `Long.MAX_VALUE`，保留为 0）补全未写的部分；`visitOutputResourceLimits()` 使用 `Limit.MAX_QUANTITY_MAX_RETENTION`（两者都是 `Long.MAX_VALUE`）（[Limit.java][limit]）。
+`ASTBuilder.visitInputResourceLimits()` 使用 `Limit.MAX_QUANTITY_NO_RETENTION`（数量为 `Long.MAX_VALUE`，保留为 0）补全未写的部分；`visitOutputResourceLimits()` 使用 `Limit.MAX_QUANTITY_MAX_RETENTION`（两者都是 `Long.MAX_VALUE`）（[Limit.java][limit]）。
 
 </div>
 
@@ -119,7 +119,7 @@ END
 
 <div class="version">
 
-**版本**：“多个 `b` 时合计保留 5 个，而不是每个各保留 5 个”是 4.20.0 修复的正确行为。4.22.0 又修复了输入端 `RETAIN` 的多个问题（#306、#200、#297、#199、#181），比如从大容量容器的底面输入时拒绝抽取。使用这些版本之前的 SFM 时，`RETAIN` 的行为可能与本书描述不同。
+“多个 `b` 时合计保留 5 个，而不是每个各保留 5 个”是 4.20.0 修复的正确行为。4.22.0 又修复了输入端 `RETAIN` 的多个问题（#306、#200、#297、#199、#181），比如从大容量容器的底面输入时拒绝抽取。使用这些版本之前的 SFM 时，`RETAIN` 的行为可能与本书描述不同。
 
 </div>
 

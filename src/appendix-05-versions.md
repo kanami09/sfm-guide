@@ -47,6 +47,6 @@
 
 <div class="note">
 
-**提示**：游戏中可以用 `/sfm changelog` 查看完整的更新日志，或者在“查看示例”中打开 “Changelog”。
+游戏中可以用 `/sfm changelog` 查看完整的更新日志，或者在“查看示例”中打开 “Changelog”。
 
 </div>

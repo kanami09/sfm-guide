@@ -61,7 +61,7 @@ END
 
 <div class="note">
 
-**提示**：在机器上搬运时，最好**明确写出方向**，并结合机器自己的“面配置”（很多科技模组的机器可以给每个面设置输入或输出）。不确定的话，先用网络工具右键那个面，或用 `Ctrl + I` 容器检查器看看各个面分别暴露了什么。
+在机器上搬运时，最好**明确写出方向**，并结合机器自己的“面配置”（很多科技模组的机器可以给每个面设置输入或输出）。不确定的话，先用网络工具右键那个面，或用 `Ctrl + I` 容器检查器看看各个面分别暴露了什么。
 
 </div>
 
@@ -89,7 +89,7 @@ END
 
 <div class="warning">
 
-**注意：相对方向解析失败时会退化成无方向访问。**
+**相对方向解析失败时会退化成无方向访问。**
 
 - 方块**没有朝向属性**（比如箱子是有朝向的，但很多模组方块没有）：相对方向无法计算，结果是“无方向”，相当于 `NULL SIDE`；
 - 方块**朝上或朝下**（`facing` 为 up/down）：`FRONT`/`BACK` 正常（分别是上/下），但 `LEFT`/`RIGHT` 无法计算，同样退化为“无方向”。
@@ -100,7 +100,7 @@ END
 
 <div class="source">
 
-**源码依据**：`Side.resolve()`：`LEFT -> facing.getClockWise()`，`RIGHT -> facing.getCounterClockWise()`，`FRONT -> facing`，`BACK -> facing.getOpposite()`，取不到朝向或抛出异常时返回 `null`（[Side.java][side]）。
+`Side.resolve()`：`LEFT -> facing.getClockWise()`，`RIGHT -> facing.getCounterClockWise()`，`FRONT -> facing`，`BACK -> facing.getOpposite()`，取不到朝向或抛出异常时返回 `null`（[Side.java][side]）。
 
 </div>
 
@@ -112,7 +112,7 @@ END
 
 <div class="warning">
 
-**注意**：对普通箱子这类“每个面都暴露同一个物品栏”的容器，`EACH SIDE` 会把**同一批槽位访问 7 次**。搬运本身不会因此多搬，但**计数类的操作会重复计算**。最典型的是 `IF chest EACH SIDE HAS ...`：`HAS` 会把每个方向上看到的数量累加起来，同一个箱子的东西被数了 7 遍。所以对普通容器，不要用 `EACH SIDE`。
+对普通箱子这类“每个面都暴露同一个物品栏”的容器，`EACH SIDE` 会把**同一批槽位访问 7 次**。搬运本身不会因此多搬，但**计数类的操作会重复计算**。最典型的是 `IF chest EACH SIDE HAS ...`：`HAS` 会把每个方向上看到的数量累加起来，同一个箱子的东西被数了 7 遍。所以对普通容器，不要用 `EACH SIDE`。
 
 </div>
 
@@ -159,7 +159,7 @@ side          : TOP | BOTTOM | NORTH | EAST | SOUTH | WEST
 
 <div class="version">
 
-**版本**：`EACH SIDE` 从 4.15.0 开始提供；`LEFT`/`RIGHT`/`FRONT`/`BACK` 相对方向从 4.27.0 开始提供。
+`EACH SIDE` 从 4.15.0 开始提供；`LEFT`/`RIGHT`/`FRONT`/`BACK` 相对方向从 4.27.0 开始提供。
 
 </div>
 

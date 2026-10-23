@@ -33,7 +33,7 @@ EVERY SECOND DO END   -- 1 秒 = 20 刻
 
 <div class="note">
 
-**提示**：“秒”是按每秒 20 刻换算的游戏时间。服务器卡顿（TPS 低于 20）时，现实中的间隔会相应变长。
+“秒”是按每秒 20 刻换算的游戏时间。服务器卡顿（TPS 低于 20）时，现实中的间隔会相应变长。
 
 </div>
 
@@ -66,7 +66,7 @@ END
 
 <div class="warning">
 
-**注意**：判断“是否只涉及能量”时，看的是触发器内**每一条**输入/输出语句里写明的资源（`IF` 分支内的语句也算）。**不写资源的语句默认匹配物品**。所以下面这个触发器不算“只涉及能量”，不能每刻执行：
+判断“是否只涉及能量”时，看的是触发器内**每一条**输入/输出语句里写明的资源（`IF` 分支内的语句也算）。**不写资源的语句默认匹配物品**。所以下面这个触发器不算“只涉及能量”，不能每刻执行：
 
 ```sfml,ignore
 EVERY TICK DO
@@ -81,7 +81,7 @@ END
 
 <div class="source">
 
-**源码依据**：`ASTBuilder.visitTimerTrigger()` 根据 `TimerTrigger.usesOnlyForgeEnergyResourceIO()` 选择最小间隔，并在 `time.ticks() < minInterval` 时抛出异常（[ASTBuilder.java][astbuilder]、[TimerTrigger.java][timer]）。默认值见 [SFMServerConfig.java][config]。
+`ASTBuilder.visitTimerTrigger()` 根据 `TimerTrigger.usesOnlyForgeEnergyResourceIO()` 选择最小间隔，并在 `time.ticks() < minInterval` 时抛出异常（[ASTBuilder.java][astbuilder]、[TimerTrigger.java][timer]）。默认值见 [SFMServerConfig.java][config]。
 
 </div>
 
@@ -160,7 +160,7 @@ END
 
 <div class="source">
 
-**源码依据**：`Interval.shouldTick()`：`LOCAL -> manager.getTick() % ticks == offset`，`GLOBAL -> level.getGameTime() % ticks == offset`（[Interval.java][interval]）。`ManagerBlockEntity.loadAdditional()` 中执行 `this.tick = level.random.nextInt();`。“秒”单位下的偏移量乘以 20 是 4.24.0 修复的问题。
+`Interval.shouldTick()`：`LOCAL -> manager.getTick() % ticks == offset`，`GLOBAL -> level.getGameTime() % ticks == offset`（[Interval.java][interval]）。`ManagerBlockEntity.loadAdditional()` 中执行 `this.tick = level.random.nextInt();`。“秒”单位下的偏移量乘以 20 是 4.24.0 修复的问题。
 
 </div>
 
@@ -187,7 +187,7 @@ PLUS     : '+' | P L U S ;
 
 <div class="version">
 
-**版本**：`GLOBAL` / `G` 和偏移量从 4.20.0 开始提供；`EVERY TICK DO` 写法从 4.16.0 开始提供；`SECOND`（单数）的 ×20 换算在 4.22.0 修复。
+`GLOBAL` / `G` 和偏移量从 4.20.0 开始提供；`EVERY TICK DO` 写法从 4.16.0 开始提供；`SECOND`（单数）的 ×20 换算在 4.22.0 修复。
 
 </div>
 

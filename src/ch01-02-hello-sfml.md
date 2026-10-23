@@ -33,7 +33,7 @@
 
 <div class="note">
 
-**提示**：也可以在电脑上用文本编辑器写好程序，复制后在管理器界面点击“从剪贴板粘贴”（或按 `Ctrl + V`）。VS Code 有官方的 SFML 语法高亮扩展，搜索 *Super Factory Manager Language* 即可找到。
+也可以在电脑上用文本编辑器写好程序，复制后在管理器界面点击“从剪贴板粘贴”（或按 `Ctrl + V`）。VS Code 有官方的 SFML 语法高亮扩展，搜索 *Super Factory Manager Language* 即可找到。
 
 </div>
 

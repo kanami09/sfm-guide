@@ -45,7 +45,7 @@ END
 
 <div class="source">
 
-**源码依据**：`OutputStatement.shouldCreateSlot()`：`emptySlotsOnly` 时只看 `type.isEmpty(stack)`；否则按上述规则判断（[OutputStatement.java][output]）。
+`OutputStatement.shouldCreateSlot()`：`emptySlotsOnly` 时只看 `type.isEmpty(stack)`；否则按上述规则判断（[OutputStatement.java][output]）。
 
 </div>
 
@@ -62,7 +62,7 @@ END
 
 <div class="version">
 
-**版本**：`EMPTY SLOTS IN` 从 4.25.0 开始提供。
+`EMPTY SLOTS IN` 从 4.25.0 开始提供。
 
 </div>
 

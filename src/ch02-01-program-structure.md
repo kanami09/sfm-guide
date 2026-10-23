@@ -37,7 +37,7 @@ END
 
 <div class="note">
 
-**提示**：一个程序可以包含多个触发器，它们彼此独立。每个触发器有自己的执行间隔，在一个触发器里登记的 `INPUT` 不会影响其他触发器。
+一个程序可以包含多个触发器，它们彼此独立。每个触发器有自己的执行间隔，在一个触发器里登记的 `INPUT` 不会影响其他触发器。
 
 </div>
 
@@ -204,7 +204,7 @@ outputStatement : OUTPUT outputResourceLimits? resourceExclusion? TO emptyslots?
 
 <div class="source">
 
-**源码依据**：`Program.tick()` 遍历所有触发器，为每个要执行的触发器调用 `context.fork()` 创建独立的上下文（[Program.java][program]）；`InputStatement.tick()` 只是 `context.addInput(this)`（[InputStatement.java][input]）。
+`Program.tick()` 遍历所有触发器，为每个要执行的触发器调用 `context.fork()` 创建独立的上下文（[Program.java][program]）；`InputStatement.tick()` 只是 `context.addInput(this)`（[InputStatement.java][input]）。
 
 </div>
 

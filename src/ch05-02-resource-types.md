@@ -21,13 +21,13 @@
 
 <div class="version">
 
-**版本**：Mekanism 10.7（对应 MC 1.21.1）把气体、灌注、颜料、浆液统一成了“化学品（chemical）”，SFM 4.19.0 随之把 `gas::`、`infusion::` 等改为 `chemical::` 的别名。所以在 1.21.1 上，`gas::` 和 `chemical::` 是同一种资源类型。`mekanism_energy` 只在较早的版本上可用，它允许单次操作搬运超过 `int` 范围的能量。新版本中，Mekanism 的能量直接用 `fe::` 搬运。
+Mekanism 10.7（对应 MC 1.21.1）把气体、灌注、颜料、浆液统一成了“化学品（chemical）”，SFM 4.19.0 随之把 `gas::`、`infusion::` 等改为 `chemical::` 的别名。所以在 1.21.1 上，`gas::` 和 `chemical::` 是同一种资源类型。`mekanism_energy` 只在较早的版本上可用，它允许单次操作搬运超过 `int` 范围的能量。新版本中，Mekanism 的能量直接用 `fe::` 搬运。
 
 </div>
 
 <div class="note">
 
-**提示**：你的游戏里实际能用哪些资源类型，以模组内置示例 “**Fluids and other resource types**” 末尾自动生成的列表为准。服务器可以通过配置项 `disallowedResourceTypesForTransfer` 禁用某些资源类型，被禁用的类型不会出现在这个列表里。
+你的游戏里实际能用哪些资源类型，以模组内置示例 “**Fluids and other resource types**” 末尾自动生成的列表为准。服务器可以通过配置项 `disallowedResourceTypesForTransfer` 禁用某些资源类型，被禁用的类型不会出现在这个列表里。
 
 </div>
 
@@ -63,7 +63,7 @@ SFM 会对第二种写法给出警告：输入的流体没有被后续的输出�
 
 <div class="source">
 
-**源码依据**：默认的“全部匹配”是 `ResourceIdentifier.MATCH_ALL = new ResourceIdentifier<>(".*", ".*")`，这个两参数构造函数固定使用 `sfm:item` 类型（[ResourceIdentifier.java][rid]）。`OutputStatement.gatherSlots()` 只为 `resourceLimits.getReferencedResourceTypes()` 中出现的资源类型收集槽位。
+默认的“全部匹配”是 `ResourceIdentifier.MATCH_ALL = new ResourceIdentifier<>(".*", ".*")`，这个两参数构造函数固定使用 `sfm:item` 类型（[ResourceIdentifier.java][rid]）。`OutputStatement.gatherSlots()` 只为 `resourceLimits.getReferencedResourceTypes()` 中出现的资源类型收集槽位。
 
 </div>
 

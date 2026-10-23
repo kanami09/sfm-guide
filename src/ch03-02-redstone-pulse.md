@@ -21,7 +21,7 @@ END
 
 <div class="source">
 
-**源码依据**：`ManagerBlock.neighborChanged()` 中，`isPowered = level.hasNeighborSignal(pos) || level.hasNeighborSignal(pos.above())`；当 `isPowered && !TRIGGERED` 时调用 `trackRedstonePulseUnprocessed()`。`RedstoneTrigger.tick()` 按 `context.getRedstonePulses()` 循环执行语句块；`Program.tick(manager)` 结束时调用 `manager.clearRedstonePulseQueue()`。
+`ManagerBlock.neighborChanged()` 中，`isPowered = level.hasNeighborSignal(pos) || level.hasNeighborSignal(pos.above())`；当 `isPowered && !TRIGGERED` 时调用 `trackRedstonePulseUnprocessed()`。`RedstoneTrigger.tick()` 按 `context.getRedstonePulses()` 循环执行语句块；`Program.tick(manager)` 结束时调用 `manager.clearRedstonePulseQueue()`。
 
 </div>
 
@@ -69,6 +69,6 @@ END
 
 <div class="note">
 
-**提示**：红石脉冲触发器**不受**定时触发器最小间隔的限制，每来一次脉冲就执行一次。用高频红石时钟驱动管理器，可以让物品搬运频率超过“每 20 刻一次”。这样做要考虑服务器性能，有些服务器也不欢迎这种用法。
+红石脉冲触发器**不受**定时触发器最小间隔的限制，每来一次脉冲就执行一次。用高频红石时钟驱动管理器，可以让物品搬运频率超过“每 20 刻一次”。这样做要考虑服务器性能，有些服务器也不欢迎这种用法。
 
 </div>

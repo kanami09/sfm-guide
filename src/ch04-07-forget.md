@@ -56,7 +56,7 @@ END
 
 <div class="version">
 
-**版本**：`FORGET` 从 4.14.0 开始提供。上面这个“计数保留”的例子来自 4.17.0 的更新日志，那个版本修复了部分 `FORGET` 会错误重置计数器的问题。
+`FORGET` 从 4.14.0 开始提供。上面这个“计数保留”的例子来自 4.17.0 的更新日志，那个版本修复了部分 `FORGET` 会错误重置计数器的问题。
 
 </div>
 
@@ -96,7 +96,7 @@ END
 
 <div class="source">
 
-**源码依据**：`ASTBuilder.visitForgetStatement()` 中，如果没有写标签，就用整个程序的 `USED_LABELS` 作为要撤销的标签集合；`ForgetStatement.tick()` 逐条重建输入语句，去掉被撤销的标签，并通过 `transferSlotsTo()` 把已收集的槽位和计数器转移给新语句（[ForgetStatement.java][forget]）。
+`ASTBuilder.visitForgetStatement()` 中，如果没有写标签，就用整个程序的 `USED_LABELS` 作为要撤销的标签集合；`ForgetStatement.tick()` 逐条重建输入语句，去掉被撤销的标签，并通过 `transferSlotsTo()` 把已收集的槽位和计数器转移给新语句（[ForgetStatement.java][forget]）。
 
 </div>
 

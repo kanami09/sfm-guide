@@ -19,7 +19,7 @@ END
 
 <div class="note">
 
-**提示**：这和[红石脉冲触发器](ch03-02-redstone-pulse.md)有一点不同：脉冲触发器还会检测管理器**正上方**那一格是否有信号，`REDSTONE` 条件只看管理器自己的位置。
+这和[红石脉冲触发器](ch03-02-redstone-pulse.md)有一点不同：脉冲触发器还会检测管理器**正上方**那一格是否有信号，`REDSTONE` 条件只看管理器自己的位置。
 
 </div>
 
@@ -46,7 +46,7 @@ END
 
 <div class="source">
 
-**源码依据**：`ASTBuilder.visitBooleanRedstone()` 的默认值是 `ComparisonOperator.GREATER_OR_EQUAL` 和 `Number(0)`；`BoolRedstone.test()` 用 `level.getBestNeighborSignal(manager.getBlockPos())` 作为左操作数（[BoolRedstone.java][rs]）。
+`ASTBuilder.visitBooleanRedstone()` 的默认值是 `ComparisonOperator.GREATER_OR_EQUAL` 和 `Number(0)`；`BoolRedstone.test()` 用 `level.getBestNeighborSignal(manager.getBlockPos())` 作为左操作数（[BoolRedstone.java][rs]）。
 
 </div>
 

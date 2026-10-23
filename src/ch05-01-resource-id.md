@@ -69,7 +69,7 @@ END
 
 <div class="warning">
 
-**注意：物品默认匹配任意命名空间。**
+**物品默认匹配任意命名空间。**
 
 只写 `iron_ingot` 时，匹配的是**所有**名为 `iron_ingot` 的物品，不限于原版。早期版本默认使用 `minecraft` 命名空间，现在已经改了（模组内置示例 `resource_types.sfml` 中有说明）。网上一些旧教程，以及仓库 `examples/` 目录里的旧注释，仍然写着“默认是 `minecraft:`”，这个说法已经过时了。如果确实需要区分不同模组的同名物品，就把命名空间写全：`minecraft:iron_ingot`。
 
@@ -93,7 +93,7 @@ END
 
 <div class="note">
 
-**提示**：拿不准一个模式会匹配哪些物品时，在编辑器里把光标放在它上面按 `Ctrl + Space`，SFM 会列出这个模式在当前游戏中匹配到的全部资源 ID。
+拿不准一个模式会匹配哪些物品时，在编辑器里把光标放在它上面按 `Ctrl + Space`，SFM 会列出这个模式在当前游戏中匹配到的全部资源 ID。
 
 </div>
 
@@ -120,7 +120,7 @@ END
 
 <div class="warning">
 
-**注意：字符串形式不支持 `::` 简写。** 字符串只是简单地按 `:` 切分，`"fluid::water"` 会被切成 `fluid`、空字符串、`water`，而空的命名空间匹配不到任何东西。在字符串里要写完整的正则：`"fluid:.*:water"`。
+**字符串形式不支持 `::` 简写。** 字符串只是简单地按 `:` 切分，`"fluid::water"` 会被切成 `fluid`、空字符串、`water`，而空的命名空间匹配不到任何东西。在字符串里要写完整的正则：`"fluid:.*:water"`。
 
 同样，`"*ingot"` 是**非法**的正则（`*` 前面没有可以重复的东西），会导致编译错误 *Invalid resource identifier pattern*。要写成 `".*ingot"`。
 
@@ -140,7 +140,7 @@ END
 
 <div class="source">
 
-**源码依据**：`RegexCache.isRegexPattern()` 和 `RegexCache.buildPredicate()`（[RegexCache.java][regex]）；简写转换见 `ASTBuilder.visitResource()`，切分见 `ResourceIdentifier.fromString()`（[ResourceIdentifier.java][rid]）。对常见的 `.*xxx.*`、`xxx.*`、`.*xxx` 等模式，SFM 会优化成简单的字符串包含、前缀或后缀判断，所以不用担心通配符的性能。
+`RegexCache.isRegexPattern()` 和 `RegexCache.buildPredicate()`（[RegexCache.java][regex]）；简写转换见 `ASTBuilder.visitResource()`，切分见 `ResourceIdentifier.fromString()`（[ResourceIdentifier.java][rid]）。对常见的 `.*xxx.*`、`xxx.*`、`.*xxx` 等模式，SFM 会优化成简单的字符串包含、前缀或后缀判断，所以不用担心通配符的性能。
 
 </div>
 

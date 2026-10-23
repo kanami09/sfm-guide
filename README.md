@@ -34,7 +34,7 @@ mdbook build
 - 代码块用 ` ```sfml ` 标注。只有几行语句的片段会被自动包进触发器再检查；
 - 故意写错的反面例子使用 ` ```sfml,error `，校验工具会确认它们**确实**无法解析；
 - 语法正确但会在编译期失败（比如间隔太短）或者只用于说明的片段，使用 ` ```sfml,ignore `；
-- 提示框：`<div class="note">`、`<div class="warning">`、`<div class="source">`（源码依据）、`<div class="version">`（版本信息），div 内部前后要留空行；
+- 提示框：`<div class="note">`（提示）、`<div class="warning">`（注意）、`<div class="source">`（源代码）、`<div class="version">`（版本差异），div 内部前后要留空行。标题和图标是自动生成的，正文里不用再写“提示：”之类的标签；
 - 中文全角标点紧挨着 `**` 时，粗体不会生效。要把括号放到粗体外面，例如 `**标签**（label）`。
 - Markdown 使用 markdownlint（VS Code 扩展），按照 [.markdownlint.jsonc](.markdownlint.jsonc) 进行语法检查。也可以在命令行运行 `npx markdownlint-cli2@0.23.3 "**/*.md" "#book"` 执行语法检查。
 

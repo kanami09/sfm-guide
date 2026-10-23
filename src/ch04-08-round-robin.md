@@ -69,7 +69,7 @@ END
 
 <div class="warning">
 
-**注意：混合多种资源类型时，轮询会“多走几步”。**
+**混合多种资源类型时，轮询会“多走几步”。**
 
 SFM 是按**资源类型**分别收集槽位的，每收集一种资源类型，就会计算一次目标方块，轮询也就前进一步。因此：
 
@@ -86,7 +86,7 @@ END
 
 <div class="source">
 
-**源码依据**：`RoundRobin.getPositionsForLabels()` 每次调用都执行 `next()`，让内部索引加 1（[RoundRobin.java][rr]）；`InputStatement` / `OutputStatement` 的 `gatherSlots()` 对每种引用到的资源类型分别调用 `resourceType.forEachCapability(...)`，后者内部调用 `labelAccess.getLabelledPositions()`。另外，`IF ... HAS` 条件中如果用了轮询，计算条件时也会让轮询前进。
+`RoundRobin.getPositionsForLabels()` 每次调用都执行 `next()`，让内部索引加 1（[RoundRobin.java][rr]）；`InputStatement` / `OutputStatement` 的 `gatherSlots()` 对每种引用到的资源类型分别调用 `resourceType.forEachCapability(...)`，后者内部调用 `labelAccess.getLabelledPositions()`。另外，`IF ... HAS` 条件中如果用了轮询，计算条件时也会让轮询前进。
 
 </div>
 
@@ -119,7 +119,7 @@ END
 
 <div class="version">
 
-**版本**：`ROUND ROBIN` 从 4.14.0 开始提供。
+`ROUND ROBIN` 从 4.14.0 开始提供。
 
 </div>
 

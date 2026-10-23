@@ -18,7 +18,7 @@ END
 
 <div class="source">
 
-**源码依据**：`InputStatement.tick()` 只调用 `context.addInput(this)`；`OutputStatement.tick()` 先对 `context.getInputs()` 中的每条输入语句收集来源槽位，再收集自己的目的地槽位，最后逐个调用 `moveTo(source, destination)`（[InputStatement.java][input]、[OutputStatement.java][output]）。
+`InputStatement.tick()` 只调用 `context.addInput(this)`；`OutputStatement.tick()` 先对 `context.getInputs()` 中的每条输入语句收集来源槽位，再收集自己的目的地槽位，最后逐个调用 `moveTo(source, destination)`（[InputStatement.java][input]、[OutputStatement.java][output]）。
 
 </div>
 
@@ -92,7 +92,7 @@ END
 
 <div class="version">
 
-**版本**：“多个 `OUTPUT` 共享输入端的数量限制”的正确行为是 4.16.0 修复的（之前输入端的数量限制在多个输出之间不生效）。
+“多个 `OUTPUT` 共享输入端的数量限制”的正确行为是 4.16.0 修复的（之前输入端的数量限制在多个输出之间不生效）。
 
 </div>
 

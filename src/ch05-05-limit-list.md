@@ -58,7 +58,7 @@ END
 
 <div class="version">
 
-**版本**：资源之间的 `OR` 从 4.20.0 开始提供。
+资源之间的 `OR` 从 4.20.0 开始提供。
 
 </div>
 
@@ -66,7 +66,7 @@ END
 
 <div class="warning">
 
-**注意：多个资源条目的数量是叠加的，不是取最小值。**
+**多个资源条目的数量是叠加的，不是取最小值。**
 
 如果某种资源同时被列表中的多个资源条目匹配，**每个资源条目都会单独给它“放行”一次**，最终效果是这些数量相加：
 
@@ -100,7 +100,7 @@ END
 
 <div class="source">
 
-**源码依据**：`InputStatement.gatherSlotsForCap()` 对每个非空槽位遍历所有计数器（`for (IInputResourceTracker tracker : trackers)`），每个能匹配的计数器都会为这个槽位创建一个独立的 `LimitedInputSlot`；输出端的 `gatherSlotsForCap()` 结构相同。
+`InputStatement.gatherSlotsForCap()` 对每个非空槽位遍历所有计数器（`for (IInputResourceTracker tracker : trackers)`），每个能匹配的计数器都会为这个槽位创建一个独立的 `LimitedInputSlot`；输出端的 `gatherSlotsForCap()` 结构相同。
 
 </div>
 

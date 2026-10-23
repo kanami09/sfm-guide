@@ -70,7 +70,7 @@ END
 
 <div class="version">
 
-**版本**：数量和保留量后的 `EACH` 从 4.12.0 开始提供。4.20.0 优化了 `EACH` 的性能，在此之前，匹配的种类越多，卡顿越严重。
+数量和保留量后的 `EACH` 从 4.12.0 开始提供。4.20.0 优化了 `EACH` 的性能，在此之前，匹配的种类越多，卡顿越严重。
 
 </div>
 
@@ -101,7 +101,7 @@ END
 
 <div class="source">
 
-**源码依据**：`ResourceLimit.createInputTracker()` / `createOutputTracker()` 根据数量和保留量各自的 `IdExpansionBehaviour`（`EXPAND` 或 `NO_EXPAND`），从四种计数器实现中选择一种：`SharedQuantitySharedRetention`、`ExpandedQuantitySharedRetention`、`SharedQuantityExpandedRetention`、`ExpandedQuantityExpandedRetention`（[ResourceLimit.java][rl]）。警告见 `EachInIOWithoutPatternProgramLinter`。
+`ResourceLimit.createInputTracker()` / `createOutputTracker()` 根据数量和保留量各自的 `IdExpansionBehaviour`（`EXPAND` 或 `NO_EXPAND`），从四种计数器实现中选择一种：`SharedQuantitySharedRetention`、`ExpandedQuantitySharedRetention`、`SharedQuantityExpandedRetention`、`ExpandedQuantityExpandedRetention`（[ResourceLimit.java][rl]）。警告见 `EachInIOWithoutPatternProgramLinter`。
 
 </div>
 
