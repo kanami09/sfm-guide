@@ -25,6 +25,8 @@ mdbook build
 | `src/*.md` | 各章节 |
 | `theme/sfml-highlight.js` | highlight.js 的 SFML 语法高亮定义 |
 | `theme/sfml.css` | 语法高亮配色和提示框样式 |
+| `theme/search.js` | 中文搜索：保留 mdBook 的搜索界面，把检索引擎换成 MiniSearch，中文按相邻两字切分 |
+| `theme/minisearch.js` | 第三方库 [MiniSearch](https://github.com/lucaong/minisearch) 7.2.0（MIT），未经修改 |
 | `tools/sfml-check/` | 代码块语法校验工具 |
 
 ## 写作约定

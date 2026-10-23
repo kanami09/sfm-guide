@@ -10,7 +10,8 @@ site-url = "/sfm-guide/"
 default-theme = "light"
 preferred-dark-theme = "navy"
 additional-css = ["theme/sfml.css"]
-additional-js = ["theme/sfml-highlight.js"]
+# minisearch.js 必须排在 search.js 前面：search.js 会把 mdBook 的检索引擎换成它。
+additional-js = ["theme/sfml-highlight.js", "theme/minisearch.js", "theme/search.js"]
 no-section-label = false
 git-repository-url = "https://github.com/kanami09/sfm-guide"
 
